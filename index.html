@@ -354,6 +354,19 @@
     border:1px solid rgba(52,211,153,0.3);
   }
   .featured-badge .star{width:6px; height:6px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px var(--accent)}
+  .progress-badge{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:4px 10px; border-radius:999px;
+    background:rgba(163,230,53,0.10); color:var(--accent-2);
+    font-family:'JetBrains Mono',monospace; font-size:10.5px;
+    text-transform:uppercase; letter-spacing:0.12em; font-weight:500;
+    border:1px solid rgba(163,230,53,0.30);
+  }
+  .progress-badge .star{
+    width:6px; height:6px; border-radius:50%; background:var(--accent-2);
+    box-shadow:0 0 0 0 rgba(163,230,53,0.5);
+    animation:pulse 2s infinite;
+  }
   .card-link{
     display:inline-flex; align-items:center; gap:8px;
     margin-top:16px; padding:8px 14px;
@@ -671,6 +684,34 @@
 
     <div class="projects">
 
+      <!-- Featured: NVIDIA -->
+      <article class="card featured reveal">
+        <div class="card-body" style="display:block">
+          <div>
+            <div class="card-head">
+              <div>
+                <div class="card-sub">M.S. Industry Project · Team 5</div>
+                <h3 class="card-title">NVIDIA — Developer Journey Modeling &amp; Validation</h3>
+              </div>
+              <span class="progress-badge"><span class="star" aria-hidden="true"></span>In Progress</span>
+            </div>
+            <div class="card-date" style="margin-bottom:12px">Apr 2026 – Present</div>
+            <p class="card-desc" style="max-width:70ch">
+              Building a system that identifies each NVIDIA developer's <strong style="color:var(--text); font-weight:500">journey stage and behavior segment</strong> — so NVIDIA can take targeted actions that drive engagement, retention, and product adoption. My focus is on <strong style="color:var(--text); font-weight:500">initial clustering &amp; EDA</strong> and <strong style="color:var(--text); font-weight:500">model validation</strong>: pressure-testing the primary UMAP + HDBSCAN segmentation against parallel benchmarks (SVD + Leiden, Bayesian GMM, TS2Vec sequence embeddings) to prove the resulting segments are stable, interpretable, and predictive of future developer outcomes.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">UMAP</span>
+              <span class="tag">HDBSCAN</span>
+              <span class="tag">HMM</span>
+              <span class="tag">TS2Vec</span>
+              <span class="tag">LightGBM</span>
+              <span class="tag">Behavioral Segmentation</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <!-- Featured: Amplytico -->
       <article class="card featured reveal">
         <div class="card-body">
@@ -693,10 +734,14 @@
               <span class="tag">Data Visualization</span>
               <span class="tag">Geospatial</span>
             </div>
+            <a class="card-link" href="https://site-fiber-sense.lovable.app/" target="_blank" rel="noopener">
+              View live site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
           </div>
-          <div class="featured-viz">
+          <a class="featured-viz" href="https://site-fiber-sense.lovable.app/" target="_blank" rel="noopener" aria-label="View Amplytico live site">
             <img src="assets/amplytico-site-assessment.png" alt="Amplytico site assessment dashboard — San Francisco scoring 10.0/10 viability with fiber distance, cost breakdown, and map preview." />
-          </div>
+          </a>
         </div>
       </article>
 
