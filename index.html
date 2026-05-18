@@ -10,18 +10,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#070B17;
-    --bg-2:#0B1120;
-    --surface:#0E1426;
-    --surface-2:#121A30;
-    --line:rgba(148,163,184,0.12);
-    --line-strong:rgba(148,163,184,0.22);
-    --text:#E6EAF2;
-    --muted:#8A93A6;
-    --dim:#5B667C;
-    --accent:#38BDF8;
-    --accent-2:#14B8A6;
-    --accent-glow:rgba(56,189,248,0.25);
+    --bg:#06120D;
+    --bg-2:#0A1A14;
+    --surface:#0E2118;
+    --surface-2:#122B1F;
+    --line:rgba(167,194,178,0.12);
+    --line-strong:rgba(167,194,178,0.22);
+    --text:#E6F0E9;
+    --muted:#8FA399;
+    --dim:#5C7268;
+    --accent:#34D399;
+    --accent-2:#A3E635;
+    --accent-glow:rgba(52,211,153,0.28);
     --radius:14px;
     --maxw:1120px;
     --ease:cubic-bezier(.2,.7,.2,1);
@@ -40,14 +40,14 @@
   }
   a{color:inherit;text-decoration:none}
   button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-  ::selection{background:var(--accent);color:#04121E}
+  ::selection{background:var(--accent);color:#04140C}
 
   /* ---------- Background grid + aurora ---------- */
   .bg-fx{
     position:fixed; inset:0; pointer-events:none; z-index:0;
     background:
-      radial-gradient(1100px 600px at 85% -10%, rgba(56,189,248,0.10), transparent 60%),
-      radial-gradient(900px 500px at -10% 15%, rgba(20,184,166,0.08), transparent 55%),
+      radial-gradient(1100px 600px at 85% -10%, rgba(52,211,153,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 15%, rgba(163,230,53,0.07), transparent 55%),
       linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   }
   .bg-grid{
@@ -185,12 +185,12 @@
   }
   .pulse{
     width:8px; height:8px; border-radius:50%; background:var(--accent-2);
-    box-shadow:0 0 0 0 rgba(20,184,166,0.5); animation:pulse 2s infinite;
+    box-shadow:0 0 0 0 rgba(163,230,53,0.5); animation:pulse 2s infinite;
   }
   @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(20,184,166,0.5)}
-    70%{box-shadow:0 0 0 10px rgba(20,184,166,0)}
-    100%{box-shadow:0 0 0 0 rgba(20,184,166,0)}
+    0%{box-shadow:0 0 0 0 rgba(163,230,53,0.5)}
+    70%{box-shadow:0 0 0 10px rgba(163,230,53,0)}
+    100%{box-shadow:0 0 0 0 rgba(163,230,53,0)}
   }
   .hero h1{
     font-size:clamp(44px, 8vw, 96px);
@@ -218,12 +218,12 @@
     border:1px solid transparent;
   }
   .btn-primary{
-    background:var(--accent); color:#04121E;
+    background:var(--accent); color:#04140C;
     box-shadow:0 8px 24px -8px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.25);
   }
   .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 32px -8px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.25)}
   .btn-ghost{border-color:var(--line-strong); color:var(--text)}
-  .btn-ghost:hover{border-color:var(--accent); color:var(--accent); background:rgba(56,189,248,0.05)}
+  .btn-ghost:hover{border-color:var(--accent); color:var(--accent); background:rgba(52,211,153,0.05)}
   .btn .arrow{transition:transform .25s var(--ease)}
   .btn:hover .arrow{transform:translateX(3px)}
 
@@ -268,14 +268,14 @@
   .chips{display:flex; flex-wrap:wrap; gap:8px}
   .chip{
     padding:6px 12px; border-radius:8px; font-size:13px;
-    background:rgba(56,189,248,0.06); border:1px solid rgba(56,189,248,0.18);
-    color:#BFD9EF;
+    background:rgba(52,211,153,0.06); border:1px solid rgba(52,211,153,0.20);
+    color:#B8E8D2;
     font-family:'JetBrains Mono',monospace; font-weight:400;
     transition:all .2s var(--ease);
   }
-  .chip:hover{background:rgba(56,189,248,0.12); border-color:var(--accent); color:var(--accent); transform:translateY(-1px)}
-  .chip.teal{background:rgba(20,184,166,0.06); border-color:rgba(20,184,166,0.20); color:#9FE0D4}
-  .chip.teal:hover{background:rgba(20,184,166,0.14); border-color:var(--accent-2); color:var(--accent-2)}
+  .chip:hover{background:rgba(52,211,153,0.14); border-color:var(--accent); color:var(--accent); transform:translateY(-1px)}
+  .chip.teal{background:rgba(163,230,53,0.06); border-color:rgba(163,230,53,0.22); color:#D8ECA6}
+  .chip.teal:hover{background:rgba(163,230,53,0.14); border-color:var(--accent-2); color:var(--accent-2)}
 
   /* ---------- Experience timeline ---------- */
   .timeline{position:relative; padding-left:28px}
@@ -324,14 +324,14 @@
   }
   .card::before{
     content:""; position:absolute; inset:0; border-radius:var(--radius); pointer-events:none;
-    background:radial-gradient(600px circle at var(--mx,50%) var(--my,0%), rgba(56,189,248,0.10), transparent 40%);
+    background:radial-gradient(600px circle at var(--mx,50%) var(--my,0%), rgba(52,211,153,0.10), transparent 40%);
     opacity:0; transition:opacity .3s var(--ease);
   }
-  .card:hover{transform:translateY(-4px); border-color:rgba(56,189,248,0.35); box-shadow:0 20px 50px -20px var(--accent-glow)}
+  .card:hover{transform:translateY(-4px); border-color:rgba(52,211,153,0.35); box-shadow:0 20px 50px -20px var(--accent-glow)}
   .card:hover::before{opacity:1}
   .card.featured{
-    border-color:rgba(56,189,248,0.25);
-    background:linear-gradient(180deg, rgba(56,189,248,0.05) 0%, var(--surface) 60%);
+    border-color:rgba(52,211,153,0.25);
+    background:linear-gradient(180deg, rgba(52,211,153,0.05) 0%, var(--surface) 60%);
     grid-column:1 / -1; min-height:auto;
   }
   .card-head{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:14px}
@@ -348,27 +348,41 @@
   .featured-badge{
     display:inline-flex; align-items:center; gap:6px;
     padding:4px 10px; border-radius:999px;
-    background:rgba(56,189,248,0.12); color:var(--accent);
+    background:rgba(52,211,153,0.12); color:var(--accent);
     font-family:'JetBrains Mono',monospace; font-size:10.5px;
     text-transform:uppercase; letter-spacing:0.12em; font-weight:500;
-    border:1px solid rgba(56,189,248,0.3);
+    border:1px solid rgba(52,211,153,0.3);
   }
   .featured-badge .star{width:6px; height:6px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px var(--accent)}
+  .card-link{
+    display:inline-flex; align-items:center; gap:8px;
+    margin-top:16px; padding:8px 14px;
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--accent); border:1px solid rgba(52,211,153,0.25);
+    border-radius:8px; background:rgba(52,211,153,0.04);
+    text-transform:uppercase; letter-spacing:0.08em; font-weight:500;
+    transition:all .2s var(--ease); align-self:flex-start;
+  }
+  .card-link:hover{background:rgba(52,211,153,0.12); border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-glow); transform:translateY(-1px)}
+  .card-link svg{width:13px; height:13px; transition:transform .2s var(--ease)}
+  .card-link:hover svg{transform:translate(2px,-2px)}
 
   /* Featured card layout */
   .card.featured .card-body{display:grid; grid-template-columns: 1.2fr 1fr; gap:36px; align-items:start}
   .card.featured .card-title{font-size:28px}
   .card.featured .card-desc{font-size:16px}
   .featured-viz{
-    position:relative; aspect-ratio: 4/3;
+    position:relative; aspect-ratio: 1924/1146;
     border-radius:10px; border:1px solid var(--line);
-    background:
-      radial-gradient(circle at 20% 80%, rgba(20,184,166,0.15), transparent 40%),
-      radial-gradient(circle at 80% 20%, rgba(56,189,248,0.18), transparent 45%),
-      var(--bg-2);
+    background:#F6F7F9;
     overflow:hidden;
+    box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04) inset;
   }
-  .featured-viz svg{position:absolute; inset:0; width:100%; height:100%}
+  .featured-viz img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block}
+  .featured-viz::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background: linear-gradient(180deg, rgba(52,211,153,0.04), transparent 30%);
+  }
   .viz-label{
     position:absolute; top:12px; left:12px;
     font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted);
@@ -394,7 +408,7 @@
   .c-link .ic{
     width:40px; height:40px; border-radius:10px;
     display:flex; align-items:center; justify-content:center;
-    background:rgba(56,189,248,0.08); color:var(--accent);
+    background:rgba(52,211,153,0.08); color:var(--accent);
     flex-shrink:0;
   }
   .c-link .ic svg{width:20px; height:20px}
@@ -680,40 +694,8 @@
               <span class="tag">Geospatial</span>
             </div>
           </div>
-          <div class="featured-viz" aria-hidden="true">
-            <span class="viz-label"><span class="k">//</span> PUE simulation · geographic</span>
-            <svg viewBox="0 0 400 300" preserveAspectRatio="none">
-              <!-- grid -->
-              <defs>
-                <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.5"/>
-                  <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="area2" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.35"/>
-                  <stop offset="100%" stop-color="#14B8A6" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <g stroke="rgba(148,163,184,0.08)" stroke-width="1">
-                <line x1="0" y1="75" x2="400" y2="75"/>
-                <line x1="0" y1="150" x2="400" y2="150"/>
-                <line x1="0" y1="225" x2="400" y2="225"/>
-              </g>
-              <!-- area 2 (teal, lower) -->
-              <path d="M0,220 C40,210 80,215 120,200 S200,180 240,170 300,160 340,150 380,140 400,135 L400,300 L0,300 Z" fill="url(#area2)"/>
-              <path d="M0,220 C40,210 80,215 120,200 S200,180 240,170 300,160 340,150 380,140 400,135" fill="none" stroke="#14B8A6" stroke-width="1.5" opacity="0.7"/>
-              <!-- area 1 (cyan, upper line) -->
-              <path d="M0,180 C40,165 80,175 120,150 S200,115 240,120 300,95 340,85 380,70 400,65 L400,300 L0,300 Z" fill="url(#area)"/>
-              <path d="M0,180 C40,165 80,175 120,150 S200,115 240,120 300,95 340,85 380,70 400,65" fill="none" stroke="#38BDF8" stroke-width="2"/>
-              <!-- data points -->
-              <g fill="#38BDF8">
-                <circle cx="60" cy="170" r="3"/>
-                <circle cx="140" cy="145" r="3"/>
-                <circle cx="220" cy="118" r="3"/>
-                <circle cx="300" cy="95" r="3"/>
-                <circle cx="360" cy="76" r="4" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="6"/>
-              </g>
-            </svg>
+          <div class="featured-viz">
+            <img src="assets/amplytico-site-assessment.png" alt="Amplytico site assessment dashboard — San Francisco scoring 10.0/10 viability with fiber distance, cost breakdown, and map preview." loading="lazy" />
           </div>
         </div>
       </article>
@@ -736,6 +718,10 @@
           <span class="tag">DiD Regression</span>
           <span class="tag">Energy Policy</span>
         </div>
+        <a class="card-link" href="assets/The Impact of Residential Adoption on Electricity Costs.docx" download>
+          Read the paper
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
       </article>
 
       <!-- FOSW case study -->
@@ -756,6 +742,10 @@
           <span class="tag">Offshore Wind</span>
           <span class="tag">Scenario Analysis</span>
         </div>
+        <a class="card-link" href="assets/Floating Offshore Wind - Case Study.docx" download>
+          Read the case study
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
       </article>
 
     </div>
