@@ -403,6 +403,41 @@
   }
   .viz-label .k{color:var(--accent)}
 
+  /* Basis agentic pipeline */
+  .pipeline{display:flex; flex-direction:column; gap:7px}
+  .pl-node, .pl-step, .pl-out{
+    font-family:'JetBrains Mono',monospace; border-radius:8px;
+    border:1px solid var(--line); position:relative;
+  }
+  .pl-orch{
+    text-align:center; padding:9px; font-size:12px; font-weight:500;
+    color:var(--accent); background:rgba(52,211,153,0.08);
+    border-color:rgba(52,211,153,0.30);
+  }
+  .pl-step{
+    display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+    padding:9px 12px; background:rgba(255,255,255,0.02);
+  }
+  .pl-step::before{
+    content:""; position:absolute; left:50%; top:-7px; width:1px; height:7px;
+    background:var(--line-strong);
+  }
+  .pl-agent{font-size:12px; color:var(--text); font-weight:500; white-space:nowrap}
+  .pl-role{font-size:10.5px; color:var(--muted); text-align:right; line-height:1.3}
+  .pl-out{
+    text-align:center; padding:9px; font-size:11.5px; font-weight:500;
+    color:var(--accent-2); background:rgba(163,230,53,0.07);
+    border-color:rgba(163,230,53,0.28); letter-spacing:0.04em;
+  }
+  .pl-out::before{
+    content:""; position:absolute; left:50%; top:-7px; width:1px; height:7px;
+    background:var(--line-strong);
+  }
+  @media (max-width:480px){
+    .pl-role{display:none}
+    .pl-step{justify-content:flex-start}
+  }
+
   /* ---------- Contact ---------- */
   .contact-wrap{
     max-width:720px; margin:0 auto; text-align:center;
@@ -742,6 +777,50 @@
           <a class="featured-viz" href="https://site-fiber-sense.lovable.app/" target="_blank" rel="noopener" aria-label="View Amplytico live site">
             <img src="assets/amplytico-site-assessment.png" alt="Amplytico site assessment dashboard — San Francisco scoring 10.0/10 viability with fiber distance, cost breakdown, and map preview." />
           </a>
+        </div>
+      </article>
+
+      <!-- Featured: Basis -->
+      <article class="card featured reveal">
+        <div class="card-body">
+          <div>
+            <div class="card-head">
+              <div>
+                <div class="card-sub">GSB 570 · AI for Business Analytics</div>
+                <h3 class="card-title">Basis — An Agentic IRA<br/>Tax Consultant</h3>
+              </div>
+              <span class="featured-badge"><span class="star" aria-hidden="true"></span>Featured</span>
+            </div>
+            <div class="card-date" style="margin-bottom:12px">Solo build · 2026</div>
+            <p class="card-desc">
+              A multi-agent AI pipeline that runs a full <strong style="color:var(--text); font-weight:500">Inflation Reduction Act</strong> clean-energy tax-credit analysis in under a minute — work that otherwise takes tax counsel two days. A developer submits project specs and Basis returns a structured investment memo: which credits qualify and at what stacked rate, whether the site sits in a designated energy community, IRR/NPV with and without IRA credits, risk flags, and a plain-English recommendation. Five specialized agents each return a <strong style="color:var(--text); font-weight:500">validated Pydantic object</strong> — and all financial math runs in Python, never the LLM, so the numbers are deterministic and auditable.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Claude (Bedrock)</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Pydantic</span>
+              <span class="tag">numpy DCF</span>
+              <span class="tag">NREL PVWatts</span>
+              <span class="tag">React</span>
+            </div>
+            <a class="card-link" href="assets/Basis - Agentic IRA Tax Consultant (GSB 570).pdf" target="_blank" rel="noopener">
+              View the presentation
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
+            </a>
+          </div>
+          <div class="featured-viz" aria-hidden="true" style="aspect-ratio:auto; background:radial-gradient(circle at 80% 10%, rgba(52,211,153,0.10), transparent 50%), #0A1A14; padding:22px 20px; display:flex; flex-direction:column; justify-content:center;">
+            <span class="viz-label" style="position:static; margin-bottom:14px"><span class="k">//</span> agentic pipeline · typed objects</span>
+            <div class="pipeline">
+              <div class="pl-node pl-orch">Orchestrator</div>
+              <div class="pl-step"><span class="pl-agent">News Agent</span><span class="pl-role">scans IRS / Treasury changes</span></div>
+              <div class="pl-step"><span class="pl-agent">Credit ID</span><span class="pl-role">ITC vs PTC · PWA multiplier</span></div>
+              <div class="pl-step"><span class="pl-agent">Bonus Adder</span><span class="pl-role">energy-community geocoder</span></div>
+              <div class="pl-step"><span class="pl-agent">Financial Model</span><span class="pl-role">numpy DCF · 2 scenarios</span></div>
+              <div class="pl-step pl-last"><span class="pl-agent">Memo Agent</span><span class="pl-role">synthesizes investment memo</span></div>
+              <div class="pl-out">InvestmentMemo →</div>
+            </div>
+          </div>
         </div>
       </article>
 
